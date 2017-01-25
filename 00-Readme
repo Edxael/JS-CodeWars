@@ -7,5 +7,33 @@ The following are some notes for me:
 git init
 
 
+git add *
 
+git commit -m "Mesage here"
+
+git remote add origin https://github.com/Edxael/JS-CodeWars.git
+
+git push origin master
+
+
+
+
+   *** the other notes ***
+
+good place with videos to learn Git & Github:  dataschol.io on page "3" Git & Github Videos
+
+How to clone a repository:
+- create the repository online
+- create and access work folder on PC
+-   $ git clone http.....            // to clone the directory form onoline to the computer
+- cd directory
+- create or paste files
+
+- check status
+-  $ git add * (enter)                // to add all the files 
+
+-  $ git remote -v                   // to chekc the remote locations
+-  $ git commit -m "mesage here"     // to commit the changes
+-  $ git log                         // to check the histoty
+-  $ git push origen master          // to push the changed files. 
 
