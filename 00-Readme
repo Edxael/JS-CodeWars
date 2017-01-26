@@ -35,5 +35,5 @@ How to clone a repository:
 -  $ git remote -v                   // to chekc the remote locations
 -  $ git commit -m "mesage here"     // to commit the changes
 -  $ git log                         // to check the histoty
--  $ git push origen master          // to push the changed files. 
+-  $ git push origin master          // to push the changed files. 
 
