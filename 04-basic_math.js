@@ -1,15 +1,18 @@
 // From codewars.com by Edxael  (that’s me)
 
 // ------------------------------------------------------------------------------------------------------------------------
-// Description:
-// .
-// This is the first step to understanding FizzBuzz.
-// .
-// Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
-// .
-// Your expected outputs: an array of positive integers from 1 to n
-// .
-// Your job is to write an algorithm that gets you from the input to the output.
+//   Description:
+//
+//   Your task is to create a function - basic_op().
+//
+//   The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation.
+//
+//   Examples:
+//
+//   basicOp('+', 4, 7)         // Output: 11
+//   basicOp('-', 15, 18)       // Output: -3
+//   basicOp('*', 5, 5)         // Output: 25
+//   basicOp('/', 49, 7)        // Output: 7
 // ------------------------------------------------------------------------------------------------------------------------
 
 function basicOp(operation, value1, value2){
@@ -37,8 +40,12 @@ console.log(basicOp(operation, value1, value2));
 // ----------------------------------------------------
 //       Run Output
 //
-//  [1, 2, 3, 4, 5]
+//  7
 // ----------------------------------------------------
 
 
-// Note:  The following code is not written by me, it was created by another user of codewars.com it belongs to the user: Rastalamm
+// Note:  The following code is not written by me, it was created by another user of codewars.com it belongs to the user: rollietikes
+
+function basicOp(o, a, b) {
+  return eval(a+o+b);
+}
