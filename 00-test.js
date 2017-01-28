@@ -1,11 +1,14 @@
-            // this file is just to test code for CodeWars.com
+// this file is just to test code for CodeWars.com
 
-function hoopCount (n) {
-      return  (n < 11) ?  "Keep at it until you get it" :  "Great, now move on to tricks" ;
+function preFizz(n) {
+      numbers = [];
+
+      for(i=0; i < n; i++){
+            numbers.push(i + 1);
+      }
+
+      return numbers;
 }
 
-
-var n = 18;
-// function hoopCount (n)
-
-console.log(hoopCount (n));
+var n = 5;
+preFizz(n)
