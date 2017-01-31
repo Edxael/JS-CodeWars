@@ -1,23 +1,29 @@
 This repo have the answers for the site "www.codewars.com", I do one a day to practice JavaScript and put the answer on the repository to practice Git. 
 
+ **quick location**
 cd ~/Dropbox/00-git/01-js-codewars
 
-The following are some notes for me:
+01 -Create folder on PC, and create a ReadMe file on that folder 
 
-// initialize repo
-git init
+02 -Create a new repository on GitHub.com
+
+03 -Open Terminal then CD .. to the folder previusly created and execute following commands:
+		$ git init
+		$ git add *
+		$ git remote add origin https://github.com/Edxael/JS-Small-Projects.git
+
+04 -Create new folder with files, make changes, when ready to push. 
+		$ git status
+		$ git add*
+		$ git commit -m "mesage"
+		$ git push origin master
+		// provide Username & Password. 
+ 
+
+Now youcan see all files on the GitHub.com  online repository. 
 
 
-git add *
-
-git commit -m "Mesage here"
-
-git remote add origin https://github.com/Edxael/JS-CodeWars.git
-
-git push origin master
-
-
-
+----------------------------------------------------------------------------------------------
 
    *** the other notes ***
 

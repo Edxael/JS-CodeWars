@@ -1,3 +1,4 @@
+// 06-Calculate-Average
 // From codewars.com by Edxael  (that’s me)
 // https://www.codewars.com/kata/calculate-average/javascript
 
@@ -22,7 +23,7 @@ console.log(  find_average(array)  );
 // ----------------------------------------------------
 //       Run Output
 //
-//  2
+//  5
 // ----------------------------------------------------
 
 
