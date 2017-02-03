@@ -16,26 +16,22 @@
 // remove("Hi") === "Hi"
 // ------------------------------------------------------------------------------------------------------------------------
 
+function isLucky(ticket) {
+    arr = ticket.split("");
 
-function remove(s){
+    for(var x = 0; x < ticket.length; x++){
+        arr[x] = parseInt(arr[x]);
+    }
 
-  var arr = s.split("").reverse();
+    var half1 = arr[0] + arr[1] + arr[2];
+    var half2 = arr[3] + arr[4] + arr[5];
 
-  for(var x = 0; x <= arr.length; x++){
+    return (half1 == half2)
 
-    if(arr[x] == "!"){arr[x] = null;}
-    else if (arr[x] != "!") {break;}
-
-  }
-
-  return arr.reverse().join("");
 }
 
-    // Variable and calling function
-var s = "Les!!!Hi!!!!";
-console.log(remove(s));
-
-
+var ticket = '100001';
+console.log(isLucky(ticket));
 // ----------------------------------------------------
 //       Run Output
 //
@@ -44,5 +40,3 @@ console.log(remove(s));
 
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com it belongs to the user: Chrono79
-
-const remove = s => s.replace(/!+$/, '');
