@@ -16,22 +16,17 @@
 // remove("Hi") === "Hi"
 // ------------------------------------------------------------------------------------------------------------------------
 
-function isLucky(ticket) {
-    arr = ticket.split("");
-
-    for(var x = 0; x < ticket.length; x++){
-        arr[x] = parseInt(arr[x]);
-    }
-
-    var half1 = arr[0] + arr[1] + arr[2];
-    var half2 = arr[3] + arr[4] + arr[5];
-
-    return (half1 == half2)
+function replace(s){
+console.log("Hello");
+  return s = s.replace(/[aeiou]/g, "!");
 
 }
 
-var ticket = '100001';
-console.log(isLucky(ticket));
+var s = "aeiou";
+console.log(replace(s));
+
+
+
 // ----------------------------------------------------
 //       Run Output
 //
