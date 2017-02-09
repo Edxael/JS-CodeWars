@@ -1,4 +1,4 @@
-// 11-Shuffled-Array.js
+// 13-Split-Strings.js
 // From codewars.com by Edxael  (that’s me)
 // https://www.codewars.com/kata/simple-fun-number-87-shuffled-array/javascript
 
@@ -8,18 +8,11 @@
 //
 // ------------------------------------------------------------------------------------------------------------------------
 
-function createArrayOfTiers(num) {
-  var holder = [];
-  var str = (num.toString()).split("");
 
-  for(var x=0; x<str.length; x++){
-    holder[x] = str.slice(0,(x + 1)).join("");
-  }
-  return holder;
-}
+str = "ender";
+var groups = str.match(/.{1,2}/g);
+console.log(groups);
 
-var num = 2017;
-console.log(createArrayOfTiers(num));
 
 // ----------------------------------------------------
 //       Run Output
@@ -29,4 +22,4 @@ console.log(createArrayOfTiers(num));
 
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com
-// it belongs to the user: myjinxin2015
+// it belongs to the user: JasonLough
