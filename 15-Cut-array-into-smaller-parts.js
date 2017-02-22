@@ -1,15 +1,13 @@
-// 14-Reverse-Words.js
+// 15-Cut-array-into-smaller-parts.js
 // From codewars.com by Edxael  (that’s me)
-// https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/javascript
+// https://www.codewars.com/kata/cut-array-into-smaller-parts/train/javascript
 
 // ------------------------------------------------------------------------------------------------------------------------
 //    Description:
 //
-// Write a reverseWords function that accepts a string a parameter, and reverses each word in the string. Every space should stay, so you cannot use words from Prelude.
+// Write function makeParts that will take an array as argument and the size of the chunk.
 // .
-// Example:
-// .
-// reverseWords("This is an example!"); // returns  "sihT si na !elpmaxe"
+// Example: if an array of size 123 is given and chunk size is 10 there will be 13 parts, 12 of size 10 and 1 of size 3.
 // ------------------------------------------------------------------------------------------------------------------------
     // String Reverse
 
@@ -30,9 +28,20 @@ console.log(makeParts(arr, chunkSize));
 // ----------------------------------------------------
 //       Run Output
 //
-//  sihT si na !elpmaxe
+//  [Array[1], Array[1], Array[1]]
 // ----------------------------------------------------
 
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com
-// it belongs to the user: mrkishi
+// it belongs to the user: !Nemo
+
+function makeParts(arr, chunkSize) {
+  var chunky = [],
+      chunks = arr.length / chunkSize,
+      i = 0;
+  while(i < chunks) {
+    chunky[i] = arr.splice(0, chunkSize);
+    i++;
+  }
+  return chunky;
+}
