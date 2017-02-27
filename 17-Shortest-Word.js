@@ -27,4 +27,8 @@ console.log(findShort(s));
 
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com
-// it belongs to the user: msharp9
+// it belongs to the user: robinab
+
+function findShort(s){
+  return Math.min.apply(null, s.split(' ').map(w => w.length));
+}
