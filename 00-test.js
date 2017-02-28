@@ -11,13 +11,30 @@
 // ------------------------------------------------------------------------------------------------------------------------
     // CODE
 
-function findShort(s){
-    var arr = s.split(" ").sort(function(a, b){return a.length - b.length;});
-    return arr[0].length;
+console.log("Paricutin");
+
+function cartesianNeighbor(x, y){
+    console.log(x,y);
+    var arr = [];
+    for(var a = (x - 1); a <= (x + 1); a++){
+        for(var b = (y - 1); b <= (y + 1); b++){
+
+            if(a === x && b === y){
+                // console.log("saltillo: " + a + " - " +  b);
+                continue;
+            }else{
+                // console.log([a,b]);
+                arr.push([a,b]);
+            }
+
+        }
+    }
+    return arr;
 }
 
-var s = "bitcoin take over the world maybe who knows perhaps";
-console.log(findShort(s));
+var x = 2;
+var y = 2;
+console.log(cartesianNeighbor(x, y));
 
 // ----------------------------------------------------
 //       Run Output
