@@ -5,66 +5,32 @@
 // ------------------------------------------------------------------------------------------------------------------------
 //    Description:
 //
-// Cara is applying for several different jobs. The online application forms ask her to respond within a specific character count. Cara needs to check that her answers fit into the character limit.
-// .
-// Annoyingly, some application forms count spaces as a character, and some don't.
-// .
-// Your challenge:
-// .
-// Write Cara a function charCheck() with the arguments:
-// .
-// "text": a string containing Cara's answer for the question
-// "max": a number equal to the maximum number of characters allowed in the answer
-// "spaces": a boolean which is True if spaces are included in the character count and False if they are not
-// The function charCheck() should return an array: [True, "Answer"] , where "Answer" is equal to the original text, if Cara's answer is short enough.
-// .
-// If her answer "text" is too long, return an array: [False, "Answer"]. The second element should be the original "text" string truncated to the length of the limit.
-// .
-// For example:
-// .
-// charCheck("Cara Hertz", 10, True) should return [ True, "Cara Hertz" ]
-// charCheck("Cara Hertz", 9, False) should return [ True, "CaraHertz" ]
-// charCheck("Cara Hertz", 5, True) should return [ False, "Cara " ]
-// charCheck("Cara Hertz", 5, False) should return [ False, "CaraH" ]
-// When the "spaces" boolean is False, the spaces are removed from the answer "text".
+// Cara is ahe character limit
 // ------------------------------------------------------------------------------------------------------------------------
     // CODE
-function charCheck(text, max, spaces){
+console.log("Hello");
 
-    if(spaces === true){
+function group(arr) {
+    var sets =[["E"]];
+    var y = 0;
 
-        if(text.length > max){
-            text = text.split("");
-            text.splice(max);
-            text = text.join("");
-            return [false, text];
+    arr = arr.sort(function(a, b){return a - b});
+
+    for(var x = 0; x < arr.length; x++){
+        if(arr[x] === sets[y][0]){
+            sets[y].push(arr[x]);
         }else{
-            return [true, text];
+            sets.push([arr[x]]);
+            y += 1;
         }
-
-    }else{
-
-        if( (text.split(" ").join("").length) > max){
-
-            text = text.split(" ").join("").split("");
-            text.splice(max);
-            text = text.join("");;
-            return [false, text];
-
-        }else{
-            text = text.split(" ").join("");
-            return [true, text];
-        }
-
     }
+
+    sets.shift();
+    return sets;
 }
 
-
-var text = "As relevant experience.";
-var max  = 90;
-var spaces = false;
-
-console.log(charCheck(text, max, spaces));
+var arr = [3, 2, 6, 2, 1, 3];
+console.log(group(arr));
 // ----------------------------------------------------
 //       Run Output
 //
@@ -74,8 +40,3 @@ console.log(charCheck(text, max, spaces));
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com
 // it belongs to the user: ColeBeckwith
-
-function charCheck(text, max, spaces){
-  text = spaces? text : text.replace(/ /g, '');
-  return [text.length <= max, text.substring(0, max)]
-};

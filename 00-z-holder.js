@@ -2,23 +2,26 @@
 console.log("This is a Holder file");
 // ---------------------------------
 
+console.log("Hello");
 
+function group(arr) {
+    console.log(arr);
+    var sets =[["E"]];
+    var y = 0;
 
-var count = 0;
-var locat = 0;
-arrH = []
-arrO = text.split("");
+    arr = arr.sort(function(a, b){return a - b});
+    console.log(arr);
 
-while(count <= max){
-
-    if(arrO[locat] == " "){
-        arrH.push(arrO[locat]);
-        locat += 1;
-    }else{
-        arrH.push(arrO[locat]);
-        locat += 1;
-        count += 1;
+    for(var x = 0; x < arr.length; x++){
+        if(arr[x] === sets[y][0]){
+            sets[y].push(arr[x]);
+        }else{
+            sets.push([arr[x]]);
+            y += 1;
+        }
     }
+    console.log(" ");
+    console.log("sets");
+    console.log(sets);
 
 }
-text = arrH.join("");
