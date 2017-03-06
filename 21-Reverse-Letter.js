@@ -1,4 +1,4 @@
-// 20-Character-limits.js
+// 21-Reverse-Letter.js
 // From codewars.com by Edxael  (that’s me)
 // https://www.codewars.com/kata/simple-fun-number-176-reverse-letter/train/javascript
 

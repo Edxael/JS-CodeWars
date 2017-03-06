@@ -2,26 +2,26 @@
 console.log("This is a Holder file");
 // ---------------------------------
 
-console.log("Hello");
+function reverseLetter(str) {
+    console.log(str);
 
-function group(arr) {
-    console.log(arr);
-    var sets =[["E"]];
-    var y = 0;
-
-    arr = arr.sort(function(a, b){return a - b});
+    var arr = str.split("");
     console.log(arr);
 
     for(var x = 0; x < arr.length; x++){
-        if(arr[x] === sets[y][0]){
-            sets[y].push(arr[x]);
+        if( arr[x].match( /[a-zA-Z]/ ) ){
+            console.log("Yes: " + arr[x]);
+
         }else{
-            sets.push([arr[x]]);
-            y += 1;
+            console.log("Noooooooo: " + arr[x]);
+            delete arr[x];
         }
     }
+
     console.log(" ");
-    console.log("sets");
-    console.log(sets);
+    arr = arr.filter(function(n){return n != undefined}).reverse();
+    console.log(arr);
+
+    return str = arr.join("");
 
 }
