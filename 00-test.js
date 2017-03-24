@@ -1,48 +1,52 @@
-// 21-Get-the-Middle-Character.js
+// 21-Perfect-Power.js
 // From codewars.com by Edxael  (that’s me)
-// https://www.codewars.com/kata/get-the-middle-character/train/javascript
+// https://www.codewars.com/kata/54d4c8b08776e4ad92000835/train/javascript
 
 // ------------------------------------------------------------------------------------------------------------------------
 //    Description:
 //
-// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// A perfect power is a classification of positive integers:
 // .
-// Examples:
+// In mathematics, a perfect power is a positive integer that can be expressed as an integer power of another positive integer. More formally, n is a perfect power if there exist natural numbers m > 1, and k > 1 such that mk = n.
+// Your task is to check wheter a given integer is a perfect power. If it is a perfect power, return a pair m and k with mk = n as a proof. Otherwise return Nothing, Nil, null, None or your language's equivalent.
 // .
-// Kata.getMiddle("test") should return "es"
+// Note: For a perfect power, there might be several pairs. For example 81 = 3^4 = 9^2, so (3,4) and (9,2) are valid solutions. However, the tests take care of this, so if a number is a perfect power, return any pair that proves it.
 // .
-// Kata.getMiddle("testing") should return "t"
+// Examples
 // .
-// Kata.getMiddle("middle") should return "dd"
-// .
-// Kata.getMiddle("A") should return "A"
-// Input
-// .
-// A word (string) of length 0 < str < 1000
-// .
-// Output
-// .
-// The middle character(s) of the word represented as a string.
+// Test.describe("perfect powers", function(){
+//   Test.it("should work for some examples",function(){
+//     Test.assertSimilar(isPP(4), [2,2], "4 = 2^2");
+//     Test.assertSimilar(isPP(9), [3,2], "9 = 3^2");
+//     Test.assertEquals( isPP(5), null, "5 isn't a perfect number");
+//   });
+// });
 // ------------------------------------------------------------------------------------------------------------------------
     // CODE
 
-function getMiddle(s){
-    return (s.length % 2 === 0) ? s[((s.length / 2)-1)] + s[(s.length / 2)] : s[Math.floor(s.length / 2)];
+console.log("Leones");
+
+var isPP = function(n){
+    var num = Math.ceil(Math.sqrt(n));
+
+    for(var x = 1; x <= num; x++){
+        for(var y = 1; y <= num; y++){
+            if((x**y) === n){return [[x, y], (n + " = " + x + "^" + y)];}
+        }
+    }
+
+    return [null, (n + " isn't a perfect number")];
 }
 
-let s = "Middle";
-console.log(getMiddle(s));
+var n = 81;
+console.log(isPP(n));
+
 // ----------------------------------------------------
 //       Run Output
 //
-//  dd
+//  [true, "Asrelevantexperience."]
 // ----------------------------------------------------
 
 
 // Note:  The following code is not written by me, it was created by another user of codewars.com
-// it belongs to the user: Oksana
-
-function getMiddle(s)
-{
-  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
-}
+// it belongs to the user: ColeBeckwith
